@@ -1,0 +1,32 @@
+{
+  "name": "dbh/core",
+  "description": "core code",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "peter"
+  ],
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "peter",
+      "email": "peterhebi@126.com",
+      "role": "developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "by\\": "src/",
+      "byTest\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "ext-iconv": "*"
+  },
+  "require-dev": {
+  }
+}
