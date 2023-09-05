@@ -21,7 +21,7 @@ abstract class BaseObject
 {
 
     // member function
-
+    const Version = 201001;
     // construct
     public function __construct()
     {
