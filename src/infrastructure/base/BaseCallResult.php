@@ -21,10 +21,10 @@ abstract class BaseCallResult
 {
 
     private string|int $code;
-    private string $msg;// 返回的结果码
+    private string|array $msg;// 返回的结果码
     private mixed $data;//  返回消息
 
-    public function __construct(mixed $data = '', string $msg = '', string|int $code = 0)
+    public function __construct(mixed $data = '', string|array $msg = '', string|int $code = 0)
     {
         $this->code = $code;
         $this->data = $data;
@@ -48,17 +48,17 @@ abstract class BaseCallResult
     }
 
     /**
-     * @return string
+     * @return string|array
      */
-    public function getMsg(): string
+    public function getMsg(): string|array
     {
         return $this->msg;
     }
 
     /**
-     * @param string $msg
+     * @param string|array $msg
      */
-    public function setMsg(string $msg): void
+    public function setMsg(string|array $msg): void
     {
         $this->msg = $msg;
     }

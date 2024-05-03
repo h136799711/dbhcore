@@ -19,11 +19,9 @@ namespace by\infrastructure\base;
 
 use by\infrastructure\constants\BaseErrorCode;
 use by\infrastructure\helper\Object2DataArrayHelper;
-use JetBrains\PhpStorm\Pure;
 
 class CallResult extends BaseCallResult
 {
-    #[Pure]
     public function __construct($data = '', $msg = '', $code = BaseErrorCode::Success)
     {
         parent::__construct($data, $msg, $code);
@@ -33,7 +31,6 @@ class CallResult extends BaseCallResult
      * 是否操作失败
      * @return bool
      */
-    #[Pure]
     public function isFail(): bool
     {
         return !$this->isSuccess();
@@ -45,7 +42,6 @@ class CallResult extends BaseCallResult
      * 是否成功
      * @return bool
      */
-    #[Pure]
     public function isSuccess(): bool
     {
         return intval($this->getCode()) === BaseErrorCode::Success;

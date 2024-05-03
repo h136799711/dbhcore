@@ -23,5 +23,5 @@ namespace by\infrastructure\interfaces;
  */
 interface ToJsonStringInterfaces
 {
-    function toJsonString(): string;
+    function toJsonString(): bool|string;
 }
